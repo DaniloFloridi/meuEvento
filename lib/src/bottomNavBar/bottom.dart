@@ -7,15 +7,25 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return BottomNavigationBar(
-      items: [
-        
+
+      type: BottomNavigationBarType.fixed,
+      
+      items: [  
+
+        const BottomNavigationBarItem( 
+            icon: Icon(Icons.home), label: "Início"),
+
         const BottomNavigationBarItem(
-            icon: Icon(Icons.home), label: "Home"),
+            icon: Icon(Icons.search), label: "Buscar"),
+
         const BottomNavigationBarItem(
-            icon: Icon(Icons.map), label: "Location"),
-        const BottomNavigationBarItem(icon: Icon(Icons.event), label: "Ingressos")
-    
+            icon: Icon(Icons.event), label: "Eventos"),
+            
+        const BottomNavigationBarItem(
+            icon: Icon(Icons.person), label: "Perfil"),
+
       ],
     );
   }

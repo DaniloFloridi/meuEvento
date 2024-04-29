@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'src/bottomNavBar/bottom.dart';
-
+import 'src/eventos/Eventos.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,6 +17,10 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         bottomNavigationBar: BottomNavBar(),
+      
+      body: Container(child: 
+      Eventos(),
+      ),
       ),
     );
   }
