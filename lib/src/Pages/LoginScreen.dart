@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  // text editing controllers
+
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  // sign user in method
+
   void signUserIn() {}
 
   @override
@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 50),
 
-              // logo
+
               const Icon(
                 Icons.event_note,
                 size: 100,
@@ -31,7 +31,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // welcome back, you've been missed!
               Text(
                 'Bem vindo !',
                 style: TextStyle(
@@ -42,7 +41,7 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              // username textfield
+
               MyTextField(
                 controller: usernameController,
                 hintText: 'Email',
@@ -51,7 +50,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-              // password textfield
               MyTextField(
                 controller: passwordController,
                 hintText: 'Senha',
@@ -60,7 +58,7 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-              // forgot password?
+ 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -76,7 +74,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              // sign in button
 
               MyButton(
                 onTap: signUserIn,
@@ -85,7 +82,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // or continue with
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -108,7 +104,6 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // not a member? register now
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
