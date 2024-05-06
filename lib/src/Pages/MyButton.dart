@@ -1,3 +1,4 @@
+import 'package:evento/src/Pages/Eventos.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
@@ -7,8 +8,9 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
+    return ElevatedButton(onPressed: () {
+      _navigateToNextScreen(context);
+    },
       child: Container(
         padding: const EdgeInsets.all(25),
         margin: const EdgeInsets.symmetric(horizontal: 25),
@@ -18,7 +20,7 @@ class MyButton extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            "Sign In",
+            "Entrar",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -28,5 +30,12 @@ class MyButton extends StatelessWidget {
         ),
       ),
     );
+    
+  }
+
+  void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Eventos()));
   }
 }
+
+

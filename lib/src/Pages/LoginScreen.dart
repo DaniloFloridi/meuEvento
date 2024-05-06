@@ -5,10 +5,8 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-
 
   void signUserIn() {}
 
@@ -22,15 +20,11 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 50),
-
-
               const Icon(
                 Icons.event_note,
                 size: 100,
               ),
-
               const SizedBox(height: 50),
-
               Text(
                 'Bem vindo !',
                 style: TextStyle(
@@ -38,27 +32,19 @@ class LoginScreen extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-
               const SizedBox(height: 25),
-
-
               MyTextField(
                 controller: usernameController,
                 hintText: 'Email',
                 obscureText: false,
               ),
-
               const SizedBox(height: 10),
-
               MyTextField(
                 controller: passwordController,
                 hintText: 'Senha',
                 obscureText: true,
               ),
-
               const SizedBox(height: 10),
-
- 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -71,17 +57,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
               const SizedBox(height: 25),
-
-
               MyButton(
                 onTap: signUserIn,
               ),
-
-
               const SizedBox(height: 50),
-
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -101,9 +81,7 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
               const SizedBox(height: 50),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
