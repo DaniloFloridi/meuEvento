@@ -5,27 +5,6 @@ class Eventos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-      
-        body: Column(
-
-
-          children: [
-            const ListTile(
-              title: const Text("Evento de Teatro"),
-              tileColor: Colors.green,
-              leading: Icon(Icons.theater_comedy),
-            ),
-
-            const ListTile(
-              title: const Text("Evento de Atletismo"),
-              tileColor: Colors.red,
-              leading: Icon(Icons.sports_gymnastics),
-            )
-          ],
-        ),
-      ),
-    );
+    return const Placeholder();
   }
 }
