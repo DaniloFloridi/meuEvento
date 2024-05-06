@@ -1,3 +1,4 @@
+import 'package:evento/src/Pages/MyButton.dart';
 import 'package:evento/src/Pages/textField.dart';
 import 'package:flutter/material.dart';
 
@@ -76,6 +77,10 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 25),
 
               // sign in button
+
+              MyButton(
+                onTap: signUserIn,
+              ),
 
 
               const SizedBox(height: 50),
