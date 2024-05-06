@@ -1,4 +1,4 @@
-import 'package:evento/src/Pages/Eventos.dart';
+import 'package:evento/src/Pages/Register.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
@@ -34,7 +34,7 @@ class MyButton extends StatelessWidget {
   }
 
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Eventos()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  Register()));
   }
 }
 
