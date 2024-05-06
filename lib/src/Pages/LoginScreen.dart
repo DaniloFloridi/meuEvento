@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
               // username textfield
               MyTextField(
                 controller: usernameController,
-                hintText: 'Nome de Usuário',
+                hintText: 'Email',
                 obscureText: false,
               ),
 
