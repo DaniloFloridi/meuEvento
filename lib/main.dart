@@ -14,20 +14,4 @@ class MyApp extends StatelessWidget {
       home: LoginScreen(),
     );
   }
-
-
-  AppBar appBar() {
-    return AppBar(
-        title: const Text("Meu Evento",
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 18,
-          fontWeight: FontWeight.bold
-        ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-      );
-  }
 }

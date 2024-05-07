@@ -27,5 +27,6 @@ class Conexao {
       },
       version: 1,
     );
+
   }
 }
