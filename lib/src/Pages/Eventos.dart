@@ -5,26 +5,6 @@ class Eventos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              children: [
-
-              ],
-            ),
-
-            const SizedBox(width: 20,),
-
-            Row(
-              children: [
-                
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
+    return const Placeholder();
   }
 }
