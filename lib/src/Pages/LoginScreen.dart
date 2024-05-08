@@ -40,6 +40,7 @@ class LoginScreen extends StatelessWidget {
                 hintText: 'Email',
                 obscureText: false,
               ),
+
               const SizedBox(height: 10),
               MyTextField(
                 controller: passwordController,
@@ -89,23 +90,26 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Text(
                     'Não possui uma conta ?',
-                    style: TextStyle(color: Colors.grey[700],
-                    fontSize: 16
-                    ),
+                    style: TextStyle(color: Colors.grey[700], fontSize: 16),
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                      padding: const EdgeInsets.all(10),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+                        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                        padding: const EdgeInsets.all(10),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20))),
+                    child: const Text(
+                      "Cadastre-se aqui !",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 69, 93, 231)),
                     ),
-
-                    child: const Text("Cadastre-se aqui !", style: TextStyle(fontSize: 16, 
-                    color: Color.fromARGB(255, 69, 93, 231)
-                    ),),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen() ));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignInScreen()));
                     },
                   ),
                 ],

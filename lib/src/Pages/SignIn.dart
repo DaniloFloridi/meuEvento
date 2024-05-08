@@ -7,6 +7,8 @@ class SignInScreen extends StatelessWidget {
 
   final nomeController = TextEditingController();
   final dataNascimentoController = TextEditingController();
+  final emailController = TextEditingController();
+  final senhaController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,30 @@ class SignInScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
+
+              Row(
+                children: [
+
+                  const SizedBox(width: 25,),
+
+                ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    padding: const EdgeInsets.all(5),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                child: const Text(
+                  "Voltar",
+                  style: TextStyle(fontSize: 14),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+
+                ),
+                ],
+              ),
+
               const SizedBox(
                 height: 50,
               ),
@@ -43,16 +68,31 @@ class SignInScreen extends StatelessWidget {
                   controller: dataNascimentoController,
                   hintText: "Data de Nascimento",
                   obscureText: false),
+              MyTextField(
+                  controller: emailController,
+                  hintText: "Email",
+                  obscureText: false,
+                ),
+              MyTextField(
+                controller: senhaController,
+                hintText: "Senha",
+                obscureText: true,
+              ),
+
               const SizedBox(
                 height: 50,
               ),
+              
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 255, 255, 255),
                     padding: const EdgeInsets.all(25),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
-                child: const Text("Criar Conta", style: TextStyle(fontSize: 18),),
+                child: const Text(
+                  "Criar Conta",
+                  style: TextStyle(fontSize: 18),
+                ),
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Eventos()));

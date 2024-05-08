@@ -16,7 +16,15 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: TextField(
+      child: TextFormField(
+        
+        validator: (value) {
+          if (value!.isEmpty == true) {
+            return "Por favor Preencha o campo...";
+          } else {
+            return null;
+          }
+        },
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(

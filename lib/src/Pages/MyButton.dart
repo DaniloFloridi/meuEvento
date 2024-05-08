@@ -1,4 +1,4 @@
-import 'package:evento/src/Pages/Register.dart';
+import 'package:evento/src/Pages/Eventos.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
@@ -12,11 +12,11 @@ class MyButton extends StatelessWidget {
       _navigateToNextScreen(context);
     },
       child: Container(
-        padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.all(15),
+        margin: const EdgeInsets.symmetric(horizontal: 0),
         decoration: BoxDecoration(
           color: Colors.black,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: const Center(
           child: Text(
@@ -34,7 +34,7 @@ class MyButton extends StatelessWidget {
   }
 
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  Register()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  Eventos()));
   }
 }
 
