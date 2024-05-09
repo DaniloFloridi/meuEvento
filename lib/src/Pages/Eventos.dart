@@ -1,4 +1,5 @@
 import 'package:evento/Categorias/EventoMusica.dart';
+import 'package:evento/src/Pages/LoginScreen.dart';
 import 'package:flutter/material.dart';
 
 class Eventos extends StatelessWidget {
@@ -7,6 +8,18 @@ class Eventos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Eventos'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
