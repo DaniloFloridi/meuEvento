@@ -25,7 +25,7 @@ class Eventos extends StatelessWidget {
           children: [
             ListTile(
               tileColor: Colors.green,
-              title: const Text("Show do Barão Vermelho", style: TextStyle(color: Colors.white),),
+              title: const Text("Eventos Esportivos", style: TextStyle(color: Colors.white),),
               leading: Icon(Icons.music_note),
               onTap: () {
                 Navigator.push(context,
@@ -33,8 +33,8 @@ class Eventos extends StatelessWidget {
               },
             ),
             ListTile(
-              tileColor: Colors.red,
-              title: const Text("Segunda conveção ao Chile"),
+              tileColor: const Color.fromARGB(255, 244, 54, 235),
+              title: const Text("Cinema"),
               leading: Icon(Icons.motorcycle),
               onTap: () {
                 Navigator.push(context,
@@ -42,8 +42,8 @@ class Eventos extends StatelessWidget {
               },
             ),
             ListTile(
-              tileColor: Colors.amber,
-              title: const Text("Corrida de São Roque"),
+              tileColor: Color.fromARGB(255, 7, 85, 255),
+              title: const Text("Shows Musicais"),
               leading: Icon(Icons.verified_user_sharp),
               onTap: () {
                 Navigator.push(context,

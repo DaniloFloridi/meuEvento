@@ -15,9 +15,6 @@ class BaraoVermelho extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-              child: Text("Valor do Ingresso: 30 Mangos"),
-            ),
             SizedBox(height: 20),
             _buildButtonListTile('Button 1', context),
             SizedBox(height: 20),
