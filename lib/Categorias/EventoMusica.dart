@@ -18,6 +18,16 @@ class BaraoVermelho extends StatelessWidget {
             Center(
               child: Text("Valor do Ingresso: 30 Mangos"),
             ),
+            SizedBox(height: 20),
+            _buildButtonListTile('Button 1', context),
+            SizedBox(height: 20),
+            _buildButtonListTile('Button 2', context),
+            SizedBox(height: 20),
+            _buildButtonListTile('Button 3', context),
+            SizedBox(height: 20),
+            _buildButtonListTile('Button 4', context),
+            SizedBox(height: 20),
+            _buildButtonListTile('Button 5', context),
             Spacer(), // Adiciona um espaço flexível para empurrar o botão para a parte inferior
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -25,10 +35,27 @@ class BaraoVermelho extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Voltar para Eventos'),
+                child: Text('Voltar para Meus Eventos'),
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButtonListTile(String buttonText, BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      child: InkWell(
+        onTap: () {
+          // Adicione a lógica para o que você deseja fazer quando o botão for pressionado
+          print('$buttonText Pressionado');
+        },
+        child: ListTile(
+          title: Text(buttonText),
         ),
       ),
     );
