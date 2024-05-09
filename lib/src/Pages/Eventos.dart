@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:evento/Categorias/EventoMusica.dart';
 import 'package:evento/src/Pages/LoginScreen.dart';
-import 'package:flutter/material.dart';
 
 class Eventos extends StatelessWidget {
-  const Eventos({super.key});
+  const Eventos({Key key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,36 +21,50 @@ class Eventos extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            ListTile(
-              tileColor: Colors.green,
-              title: const Text("Eventos Esportivos", style: TextStyle(color: Colors.white),),
-              leading: Icon(Icons.music_note),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BaraoVermelho()));
-              },
-            ),
-            ListTile(
-              tileColor: const Color.fromARGB(255, 244, 54, 235),
-              title: const Text("Cinema"),
-              leading: Icon(Icons.motorcycle),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BaraoVermelho()));
-              },
-            ),
-            ListTile(
-              tileColor: Color.fromARGB(255, 7, 85, 255),
-              title: const Text("Shows Musicais"),
-              leading: Icon(Icons.verified_user_sharp),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BaraoVermelho()));
-              },
-            )
-          ],
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _buildButtonColumn(context, 'assets/image1.png'),
+              SizedBox(width: 20),
+              _buildButtonColumn(context, 'assets/image2.png'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButtonColumn(BuildContext context, String imagePath) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        _buildImageButton(context, imagePath),
+        SizedBox(height: 20),
+        _buildImageButton(context, imagePath),
+        SizedBox(height: 20),
+        _buildImageButton(context, imagePath),
+        SizedBox(height: 20),
+        _buildImageButton(context, imagePath),
+      ],
+    );
+  }
+
+  Widget _buildImageButton(BuildContext context, String imagePath) {
+    return InkWell(
+      onTap: () {
+        // Adicione a lógica para o que você deseja fazer quando o botão for pressionado
+        print('Botão pressionado');
+      },
+      child: Container(
+        width: 100,
+        height: 100,
+        decoration: BoxDecoration(
+          image: DecorationImage(''
+            image: AssetImage(imagePath),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(15),
         ),
       ),
     );
